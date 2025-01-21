@@ -8,7 +8,10 @@
 </head>
 <body>
   <div class="container">
-    <h1>Subject Management</h1>
+
+    <button onclick="goToDashboard()" class="dashboard-btn" style="background-color: green;">Back to Dashboard</button>
+
+    <h1>Subjects Management</h1>
 
     <!-- Form to Add a Subject -->
     <div class="form">
@@ -34,5 +37,10 @@
   </div>
 
   <script src="../js/subject.js"></script>
+  <script>
+    function goToDashboard() {
+      window.location.href = "../pages/dashboard.html"; // Adjust the path if necessary
+    }
+  </script>
 </body>
 </html>

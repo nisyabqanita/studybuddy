@@ -45,4 +45,9 @@ public class ResourceService {
 
         return resourceRepository.save(existingResource);
     }
+
+    public Resource getResourceById(Long id) {
+        return resourceRepository.findById(id).orElse(null);
+    }
+    
 }

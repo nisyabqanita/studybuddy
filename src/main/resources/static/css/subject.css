@@ -18,6 +18,19 @@ h1, h2 {
   color: #333;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
 .form, .search, .subject-list {
   margin-bottom: 20px;
 }

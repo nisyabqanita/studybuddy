@@ -13,10 +13,14 @@ public class Resource {
     @NotBlank(message = "Title is required")
     private String title;
 
-    @NotBlank(message = "Type is required (e.g., Document, Link, Note)")
+    @NotBlank(message = "Type is required (e.g., Document, Link)")
     private String type;
 
     private String description;
+
+    private String filePath; // Stores the file path for PDF documents
+
+    private String link; // Stores the link if the type is "Link"
 
     // Getters and Setters
     public Long getId() {
@@ -51,6 +55,22 @@ public class Resource {
         this.description = description;
     }
 
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
     @Override
     public String toString() {
         return "Resource{" +
@@ -58,6 +78,8 @@ public class Resource {
                 ", title='" + title + '\'' +
                 ", type='" + type + '\'' +
                 ", description='" + description + '\'' +
+                ", filePath='" + filePath + '\'' +
+                ", link='" + link + '\'' +
                 '}';
     }
 }

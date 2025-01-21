@@ -118,7 +118,7 @@ async function deleteSubject(id) {
   }
 }
 
-// edit subject
+// Edit Subject
 function editSubject(id) {
   const listItem = document.querySelector(`#subject-${id}`);
   const nameElement = listItem.querySelector(".subject-name");
@@ -134,7 +134,7 @@ function editSubject(id) {
     <textarea id="editDescription-${id}">${currentDescription}</textarea>
     <input type="text" id="editDifficulty-${id}" value="${currentDifficulty}" />
     <button onclick="saveSubject(${id})">Save</button>
-    <button onclick="cancelEdit(${id}, '${currentName}', '${currentDescription.replace(/\n/g, '\\n')}', '${currentDifficulty}')">Cancel</button>
+    <button onclick="fetchSubjects()">Cancel</button>
   `;
 }
 
@@ -185,10 +185,6 @@ function cancelEdit(id, name, description, difficulty) {
     <button onclick="editSubject(${id})">Edit</button>
     <button onclick="deleteSubject(${id})">Delete</button>
   `;
-}
-
-function closeEditModal() {
-  document.getElementById("editSubjectModal").style.display = "none";
 }
 
 

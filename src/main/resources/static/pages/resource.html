@@ -8,21 +8,28 @@
 </head>
 <body>
   <div class="container">
-    <h1>Resource Management</h1>
+
+    <button onclick="goToDashboard()" class="dashboard-btn" style="background-color: green;">Back to Dashboard</button>
+    
+    <h1>Study Resources Management</h1>
 
     <!-- Add Resource Form -->
     <div class="form">
-      <h2>Add Resource</h2>
-      <input type="text" id="resourceTitle" placeholder="Resource Title">
-      <input type="text" id="resourceType" placeholder="Type (e.g., Document, Link, Note)">
-      <textarea id="resourceDescription" placeholder="Resource Description"></textarea>
-      <button onclick="addResource()">Add Resource</button>
-    </div>
+        <h2>Add Resource</h2>
+        <input type="text" id="resourceTitle" placeholder="Resource Title">
+        <textarea id="resourceDescription" placeholder="Resource Description"></textarea>
+        <input type="text" id="resourceLink" placeholder="Resource Link (optional)">
+        <div>
+          <input type="file" id="resourceFile">
+          <button type="button" onclick="removeFile()">Remove File</button>
+        </div>
+        <button onclick="addResource()">Add Resource</button>
+      </div>          
 
     <!-- Search Resources -->
     <div class="search">
       <h2>Search Resources</h2>
-      <input type="text" id="searchQuery" placeholder="Search by title or type">
+      <input type="text" id="searchQuery" placeholder="Search by title">
       <button onclick="searchResources()">Search</button>
     </div>
 
@@ -33,5 +40,10 @@
     </div>
   </div>
   <script src="../js/resource.js"></script>
+  <script>
+    function goToDashboard() {
+      window.location.href = "../pages/dashboard.html"; // Adjust the path if necessary
+    }
+  </script>
 </body>
 </html>
