@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resource Module</title>
+  <link rel="stylesheet" href="../css/resource.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Resource Management</h1>
+
+    <!-- Add Resource Form -->
+    <div class="form">
+      <h2>Add Resource</h2>
+      <input type="text" id="resourceTitle" placeholder="Resource Title">
+      <input type="text" id="resourceType" placeholder="Type (e.g., Document, Link, Note)">
+      <textarea id="resourceDescription" placeholder="Resource Description"></textarea>
+      <button onclick="addResource()">Add Resource</button>
+    </div>
+
+    <!-- Search Resources -->
+    <div class="search">
+      <h2>Search Resources</h2>
+      <input type="text" id="searchQuery" placeholder="Search by title or type">
+      <button onclick="searchResources()">Search</button>
+    </div>
+
+    <!-- Resource List -->
+    <div class="resource-list">
+      <h2>Resources</h2>
+      <ul id="resources"></ul>
+    </div>
+  </div>
+  <script src="../js/resource.js"></script>
+</body>
+</html>

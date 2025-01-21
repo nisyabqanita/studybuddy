@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <h1>StudyBuddy</h1>
+  
+  <div class="module-navigation">
+    <button onclick="navigateTo('subject.html')">Subject Module</button>
+    <button onclick="navigateTo('resource.html')">Resource Module</button>
+    <button onclick="navigateTo('lastmodule.html')">Last Module</button>
+  </div>
+  
+  <div class="pomodoro-timer">
+    <h2>Pomodoro Timer</h2>
+    <label for="timerDuration">Set Timer:</label>
+    <input class="minute-input" id="timerDuration" min="1" placeholder="Enter minutes" />
+    <button onclick="setTimer()">Set Timer</button>
+    <p id="timer-display">25:00</p>
+    <div class="timer-buttons">
+      <button onclick="startPomodoro()" style="background-color: green;">Start</button>
+      <button onclick="stopPomodoro()" style="background-color: #cc0000;">Stop</button>
+      <button onclick="resetPomodoro()">Reset</button>
+    </div>
+    <p class="recommend">Recommended set: 25 minutes working; 5 minutes break</p>
+  </div>  
+  
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>
