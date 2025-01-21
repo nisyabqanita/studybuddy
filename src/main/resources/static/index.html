@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subject Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Subject Management</h1>
+
+    <!-- Form to Add a Subject -->
+    <div class="form">
+      <h2>Add Subject</h2>
+      <input type="text" id="subjectName" placeholder="Subject Name">
+      <textarea id="subjectDescription" placeholder="Subject Description"></textarea>
+      <input type="text" id="subjectDifficulty" placeholder="Difficulty (e.g., Easy, Medium, Hard)">
+      <button onclick="addSubject()">Add Subject</button>
+    </div>
+
+    <!-- Search Subjects -->
+    <div class="search">
+      <h2>Search Subjects</h2>
+      <input type="text" id="searchQuery" placeholder="Search by name">
+      <button onclick="searchSubjects()">Search</button>
+    </div>
+
+    <!-- Subject List -->
+    <div class="subject-list">
+      <h2>Subjects</h2>
+      <ul id="subjects"></ul> 
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
