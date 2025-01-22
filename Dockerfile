@@ -14,8 +14,8 @@ EXPOSE 8080
 # Set environment variables for database connection
 ENV DB_HOST=localhost \
     DB_PORT=3306 \
-    DB_USER=student \
-    DB_PASSWORD=0000000001
+    DB_USER=user_name \
+    DB_PASSWORD=user_password
 
 # Run the Spring Boot application
 ENTRYPOINT ["java", "-jar", "app.jar"]
