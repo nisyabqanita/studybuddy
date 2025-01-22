@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  .container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1, h2 {
+    color: #333;
+    font-size: 1.8rem; /* Match font size with resource.css */
+    margin-bottom: 15px;
+  }
+  
+  input, textarea, select {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    display: block;
+    width: auto;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 1rem;
+    background-color: #007bff; /* Match button style with resource.css */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .actions { 
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Hover effect matches resource.css */
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .resource-type {
+    font-size: 0.9rem; /* Match font size with resource.css */
+    color: grey;
+    font-style: italic;
+  }  

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Progress</title>
+  <link rel="stylesheet" href="../css/progress.css">
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
+        <button onclick="goToDashboard()" class="dashboard-btn" style="background-color: green; width: fit-content;">Back to Dashboard</button>
+    </div>
+      
+  <div class="container">
+    <header>
+      <h1>Study Progress Tracker</h1>
+    </header>
+
+    <!-- Form to Add Progress -->
+    <section>
+      <h2>Add Progress</h2>
+      <select id="progressSubject">
+        <!-- Options populated dynamically -->
+      </select>
+      <textarea id="progressDescription" placeholder="Enter progress description"></textarea>
+      <input type="date" id="progressDate">
+      <button onclick="addProgress()">Add Progress</button>
+    </section>
+
+    <!-- Filter Progress -->
+    <section>
+        <h2>Filter by Subject</h2>
+        <select id="filterSubject" onchange="filterProgressBySubject()">
+        <option value="all">All Subjects</option>
+        </select>
+    </section>
+
+    <!-- List of Progress Logs -->
+    <section>
+      <h2>Progress Logs</h2>
+      <ul id="progressLogs"></ul>
+    </section>
+  </div>
+
+  <script src="../js/progress.js"></script>
+  <script>
+    function goToDashboard() {
+      window.location.href = "../pages/dashboard.html"; // Adjust the path if necessary
+    }
+  </script>
+</body>
+</html>
