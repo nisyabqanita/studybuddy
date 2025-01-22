@@ -45,12 +45,12 @@ Study Buddy is a comprehensive web application designed to help students effecti
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/study-buddy.git
+   git clone https://github.com/your-username/studybuddy.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd study-buddy
+   cd studybuddy
    ```
 
 3. Set up the MySQL database:
