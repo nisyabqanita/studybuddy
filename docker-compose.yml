@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  studybuddy-db:
+    image: mysql:8.3.0
+    container_name: studybuddy-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: studybuddy_sme
+      MYSQL_USER: user_name
+      MYSQL_PASSWORD: user_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - studybuddy-network
+
+  studybuddy-app:
+    build:
+      context: .
+    container_name: studybuddy-app
+    depends_on:
+      - studybuddy-db
+    environment:
+      DB_HOST: studybuddy-db
+      DB_PORT: 3306
+      DB_USER: user_name
+      DB_PASSWORD: user_password
+    ports:
+      - "8080:8080"
+    networks:
+      - studybuddy-network
+
+volumes:
+  db-data:
+
+networks:
+  studybuddy-network:
